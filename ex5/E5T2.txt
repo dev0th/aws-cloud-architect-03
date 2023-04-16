@@ -1,0 +1,16 @@
+1. Identify tools that will allow you to do the following: 
+a. Scan infrastructure as code templates:
+- Terrascan (https://github.com/accurics/terrascan)
+Example: 
+- Ingress open to 0.0.0.0/0
+- Server Side Encryption (SSE) not enabled
+
+b. Scan AMI’s or containers for OS vulnerabilities:
+- AWS Inspector
+Example: 
+- Common vulnerabilities and exposures or CVE findings
+
+c. Scan an AWS environment for cloud configuration vulnerabilities
+- AWStealth (https://github.com/cyberark/SkyArk/tree/master/AWStealth)
+Example: 
+- Unsecured privileged users: no MFA and no constrained permission condition

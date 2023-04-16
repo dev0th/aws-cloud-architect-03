@@ -1,0 +1,7 @@
+1. Identify 2-3 changes that can be made to our environment to prevent an SSH brute force attack from the internet:
+- Change security group settings to not to allow ssh connections from the internet
+- Remove ability for ssh login with password
+
+2. Neither instance should have had access to the secret recipes bucket; even in the instance that API credentials were compromised how could we have prevented access to sensitive data?
+- Implement least privilege access: Currently the IAM Role c3-app InstanceRole has a permission policy InstanceRolePolicy-C3 attached, which grants the role full access to all resources of S3. The policy should be edited by limiting the access to only the free recipes bucket.
+- Apply Default Server-side Encryption to the S3 Bucket: Server-side encryption could be enabled on the secret recipes bucket. 
